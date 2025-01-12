@@ -1,18 +1,10 @@
-# Snake Game
+## Snake Game
 
-Welcome to the Snake Game project! This is a classic implementation of the Snake game using modern programming techniques.
+The Snake Game is a simple yet addictive game where the player controls a snake to eat food and grow in length. The objective is to avoid colliding with the walls or the snake's own body. This implementation uses the Turtle graphics library in Python to create the game visuals.
 
-## Table of Contents
-
-- [Introduction](#introduction)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-
-## Introduction
-
-The Snake Game is a simple yet addictive game where the player controls a snake to eat food and grow in length. The objective is to avoid colliding with the walls or the snake's own body.
+<p align="center">
+  <img src="img/snake1.png" alt="SnakeGame">
+</p>
 
 ## Features
 
@@ -20,28 +12,50 @@ The Snake Game is a simple yet addictive game where the player controls a snake 
 - Increasing difficulty as the snake grows
 - Simple and intuitive controls
 - Score tracking
+- Utilizes the Turtle graphics library for rendering
 
-## Installation
+## Visual Effects
+
+The game includes visual effects to enhance the player's experience. One notable effect is the background color change. When the snake collides with the wall or its own tail, the background color turns red, providing immediate visual feedback of the collision. This effect helps to make the game more engaging and visually appealing.
+
+<p align="center">
+  <img src="img/snake2.png" alt="wall-collision">
+</p>
+
+<p align="center">
+  <img src="img/snake3.png" alt="tail-collision">
+</p>
+
+## Installation and Usage
 
 To run the Snake Game locally, follow these steps:
 
-1. Navigate to the project directory:
-    ```bash
-    cd SnakeGame
-    ```
-2. Install the necessary dependencies:
-    ```bash
-    npm install
-    ```
-
-## Usage
-
-To start the game, run the following command:
-```bash
-python3 main.py
-```
+1. Clone the repository to your local machine.
+2. Navigate to the project directory:
+  ```bash
+  cd SnakeGame
+  ```
+3. Install the necessary dependencies:
+  ```bash
+  npm install
+  ```
+4. Start the game by running the following command:
+  ```bash
+  python3 main.py
+  ```
 
 Use the arrow keys to control the snake. Try to eat the food and grow as long as possible without hitting the walls or yourself!
+
+## Project Structure
+
+The project is composed of several classes that handle different aspects of the game:
+
+- `Snake`: Manages the snake's position, movement, and growth.
+- `Food`: Handles the spawning and positioning of food items.
+- `Game`: Manages the game loop, collision detection, and overall game state.
+- `Score`: Tracks and displays the player's score.
+
+Additionally, the `data.txt` file is used to store high scores and other persistent game data.
 
 ## Contributing
 

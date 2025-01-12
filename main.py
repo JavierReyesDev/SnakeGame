@@ -22,6 +22,12 @@ screen.onkey(snake.down, "Down")
 screen.onkey(snake.left, "Left")
 screen.onkey(snake.right, "Right")
 
+def repeat():
+    screen.bgcolor("red")
+    time.sleep(0.2)
+    screen.bgcolor("black")
+    scoreboard.game_over()
+    snake.reset()
 
 game_is_on = True
 while game_is_on:
@@ -36,17 +42,11 @@ while game_is_on:
         snake.extend()
 
     if abs(snake.head.xcor()) > 285 or abs(snake.head.ycor()) > 285:
-        screen.bgcolor("red")
-        time.sleep(0.2)
-        screen.bgcolor("black")
-        print(snake.head.position())
-        scoreboard.game_over()
-        snake.reset()
+        repeat()
 
     # Detect collision with the tail
     for segment in snake.body_blocks[1:]:
         if snake.head.distance(segment) < 10:
-            scoreboard.game_over()
-            snake.reset()
+            repeat()
 
 screen.exitonclick()
