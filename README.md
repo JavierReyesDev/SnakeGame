@@ -41,7 +41,7 @@ To run the Snake Game locally, follow these steps:
   ```
 4. Start the game by running the following command:
   ```bash
-  python3 main.py
+  python main.py
   ```
 
 Use the arrow keys to control the snake. Try to eat the food and grow as long as possible without hitting the walls or yourself!
@@ -52,10 +52,9 @@ The project is composed of several classes that handle different aspects of the 
 
 - `Snake`: Manages the snake's position, movement, and growth.
 - `Food`: Handles the spawning and positioning of food items.
-- `Game`: Manages the game loop, collision detection, and overall game state.
-- `Score`: Tracks and displays the player's score.
+- `Scoreboard`: Tracks and displays the player's score.
 
-Additionally, the `data.txt` file is used to store high scores and other persistent game data.
+The `data.txt` file is used to store high scores and other persistent game data. It keeps track of the highest score achieved by the player, allowing the game to display the best score even after restarting. The file is read at the start of the game to load the previous high score and updated whenever the player achieves a new high score.
 
 ## Contributing
 
